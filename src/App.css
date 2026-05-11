@@ -182,3 +182,66 @@
     border-right-color: var(--border);
   }
 }
+
+/* ========================= */
+/* Portrait Loader + Fade In */
+/* ========================= */
+
+.portraitFadeIn {
+  opacity: 0;
+  transform: scale(1.02);
+  animation: portraitFadeIn 520ms ease-out forwards;
+}
+
+@keyframes portraitFadeIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Soft shimmer overlay while loading */
+.portraitShimmer {
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.portraitShimmer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    rgba(255,255,255,0.06) 0%,
+    rgba(255,255,255,0.16) 35%,
+    rgba(255,255,255,0.06) 70%
+  );
+  transform: translateX(-120%);
+  animation: shimmerMove 1.3s ease-in-out infinite;
+}
+
+@keyframes shimmerMove {
+  0% { transform: translateX(-120%); }
+  100% { transform: translateX(120%); }
+}
+
+/* Premium spinner (matches your gold/purple palette) */
+.spinnerDeluxe {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 4px solid rgba(255,255,255,0.16);
+  border-top-color: var(--spinner-accent, #ffd166);
+  animation: spin 0.95s linear infinite;
+  box-shadow:
+    0 0 10px rgba(255, 209, 102, 0.25),
+    0 0 22px rgba(192, 132, 252, 0.18);
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
