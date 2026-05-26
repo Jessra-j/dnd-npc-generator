@@ -110,8 +110,10 @@ app.post("/api/npc", async (req, res) => {
 const prompt = `
 Create a Dungeons & Dragons 5e inspired NPC in English (United States).
 
-${safeGender !== "Random" ? safeGender + " " : ""}${race} ${npcClass}
-
+${safeGender !== "Random"
+  ? `a clearly ${safeGender} ${race} ${npcClass} with distinct ${safeGender === "female" ? "feminine" : "masculine"} features`
+  : `${race} ${npcClass}`
+}
 Requirements:
 - Race: ${race}
 - Class: ${npcClass}
@@ -119,6 +121,10 @@ Requirements:
 - Background: ${background}
 - Special Trait: ${specialTrait || "Creative trait"}
 
+IMPORTANT:
+- The character MUST clearly appear as ${safeGender !== "Random" ? safeGender : "the defined gender"}.
+- The appearance description MUST strongly reflect this gender.
+- Avoid ambiguous or androgynous descriptions unless explicitly requested.
 Generate a detailed NPC including personality, appearance and backstory.
 
 Also generate:
@@ -232,9 +238,23 @@ console.log("➡️ URL:", url);
 console.log("➡️ Prompt:", prompt);
 console.log("🌍 AZURE_ENDPOINT:", process.env.AZURE_ENDPOINT);
 
+const genderGuard =
+  safeGender === "female"
+    ? "clearly female, feminine face, no masculine traits"
+    : safeGender === "male"
+    ? "clearly male, masculine face, no feminine traits"
+    : "androgynous fantasy character";
+    
+const imagePrompt = `
+${genderGuard},
+${prompt},
+fantasy RPG character portrait, highly detailed, centered composition
+`;
+
+
 const payload = {
   model: "gpt-image-1",
-  prompt,
+  prompt: imagePrompt,
   size: "1024x1024",
 };
 
