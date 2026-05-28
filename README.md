@@ -1,3 +1,4 @@
+![Screenshot](./screenshot.png)
 # 🎮 AI-Powered RPG NPC Generator
 
 💡 AI-powered RPG character generator using Azure OpenAI and modern fullstack technologies.
