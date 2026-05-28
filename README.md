@@ -1,16 +1,71 @@
-# React + Vite
+# 🎮 AI-Powered RPG NPC Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+💡 AI-powered RPG character generator using Azure OpenAI and modern fullstack technologies.
 
-Currently, two official plugins are available:
+An AI-powered NPC generator for RPG games, built with React, Node.js and Azure OpenAI (Foundry).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- AI-generated NPCs (personality, traits, backstory)
+- Dynamic character system (class, race, attributes)
+- Modular architecture (clean separation of data and logic)
+- Ready for integration into games or APIs
+- Designed for scalability and future AI features
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧠 Tech Stack
+
+- Frontend: React (Vite)
+- Backend: Node.js / Express
+- AI: Azure OpenAI (Foundry)
+- Version Control: GitHub
+- UI: Custom components (StatBox, FeatureCard, etc.)
+
+---
+
+## 🎯 Use Case
+
+This tool is designed for:
+
+- Game developers (NPC generation)
+- RPG tools and systems
+- AI-driven storytelling
+- Procedural content generation
+
+---
+
+## ⚙️ How it works
+
+1. User selects character parameters (class, race, etc.)
+2. Backend processes structured input
+3. Azure OpenAI generates character content
+4. Frontend renders a complete NPC sheet
+
+---
+
+## 🔮 Future Improvements
+
+- AI dialogue system (interactive NPC chat)
+- Memory system (NPC remembers player actions)
+- Export API (JSON for game engines)
+- AI-generated quests and storylines
+
+---
+
+## 💡 Why this project matters
+
+This project shows real-world application of:
+
+- Generative AI in interactive systems
+- LLM integration into production apps
+- AI-assisted content creation workflows
+
+---
+
+## 🧑‍💻 Author
+
+Jessica Ratnam  
+AI Developer (Azure OpenAI, React, Node.js)
