@@ -1,6 +1,6 @@
 
 # 🎮 AI-Powered RPG NPC Generator
-![App Screenshot](./screenshot.png)
+![App Screenshot](./public/screenshot.png)
 
 💡 AI-powered RPG character generator using Azure OpenAI and modern fullstack technologies.
 
