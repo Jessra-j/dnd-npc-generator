@@ -53,6 +53,13 @@ This tool is designed for:
 
 ---
 
+## 🔗 Data Sources
+
+- Dungeons & Dragons API (for spell data)
+- AI-generated content (Azure OpenAI)
+
+---
+
 ## 🔮 Future Improvements
 
 - AI dialogue system (interactive NPC chat)
