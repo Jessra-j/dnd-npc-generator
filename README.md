@@ -15,6 +15,8 @@ An AI-powered NPC generator for RPG games, built with React, Node.js and Azure O
 - Modular architecture (clean separation of data and logic)
 - Ready for integration into games or APIs
 - Designed for scalability and future AI features
+- Integration of external D&D API for spell data retrieval
+
 
 ---
 
@@ -44,9 +46,10 @@ This tool is designed for:
 ## ⚙️ How it works
 
 1. User selects character parameters (class, race, etc.)
-2. Backend processes structured input
-3. Azure OpenAI generates character content
-4. Frontend renders a complete NPC sheet
+2. Application retrieves spell data from an external D&D API
+3. Backend processes structured input
+4. Azure OpenAI generates character content (traits, backstory, personality)
+5. Frontend renders a complete NPC sheet
 
 ---
 
