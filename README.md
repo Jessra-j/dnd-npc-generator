@@ -25,6 +25,8 @@ An AI-powered NPC generator for RPG games, built with React, Node.js and Azure O
 - AI: Azure OpenAI (Foundry)
 - Version Control: GitHub
 - UI: Custom components (StatBox, FeatureCard, etc.)
+- External API: Dungeons & Dragons API (for spell data)
+
 
 ---
 
